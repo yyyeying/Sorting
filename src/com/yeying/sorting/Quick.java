@@ -1,18 +1,18 @@
 package com.yeying.sorting;
 
 public class Quick implements Sort {
-    public int[] sort(int[] array) {
+    public static int[] sort(int[] array) {
         partition(array, 0, array.length - 1);
         return array;
     }
 
-    private void swap(int[] array, int i, int j) {
+    private static void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
 
-    private void partition(int[] array, int start, int end) {
+    private static void partition(int[] array, int start, int end) {
         //System.out.println("start: " + start + "\tend: " + end);
         if (start < end) {
             int base = array[start];
